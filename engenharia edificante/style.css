@@ -1,0 +1,301 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  /* height: 1000px; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* __________________________________________________________________________________________________________
+header */
+.logo {
+  color: #215a60;
+  font-family: "Alice", serif;
+}
+span {
+  font-family: "Marck Script", cursi;
+}
+
+.header  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+ 
+  
+}
+
+.header-menu  {
+  display: flex;
+  gap: 20px;
+  /* color: white; */
+  font-size: 17px;
+  font-weight: 650;
+ 
+  
+}
+a{
+  color: #215a60;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  /* #btn-mobile {
+    display: block;
+  } */
+
+  .header-menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 115px;
+    right: 0px;
+    /* background: #215a60; */
+    height: 0px;
+    z-index: 1000;
+    margin-top: 50px;
+    transition: 0.4s;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  #nav.active .header-menu {
+    /* display: flex; */
+    visibility: visible;
+    overflow-y: auto;
+    height: 500vh;
+  }
+
+  .header-menu a {
+    display: grid;
+    padding: 1rem 0;
+    margin: 0 1rem;
+    color: #215a60;
+    border-bottom: 2px solid #215a60;
+    margin-top: 20px;
+  }
+
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+  #hamburguer {
+    width: 20px;
+    border-top: 2px solid black;
+  }
+
+  #hamburguer::after,
+  #hamburguer::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    margin-top: 5px;
+  }
+}
+
+.foto-header {
+  height: 400px;
+  background-image: url("./img/img\ header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+/* __________________________________________________________________________________________________________
+sobre */
+
+.sobre-bg {
+  background: #215a60;
+}
+.sobre {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.titulo-sobre {
+  font-size: 3em;
+}
+
+.descricao-sobre {
+  font-size: 25px;
+}
+
+@media (max-width: 439px) {
+  .sobre {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .titulo-sobre {
+    font-size: 40px;
+  }
+}
+/* __________________________________________________________________________________________________________
+servicos */
+
+.servico-bg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 960px;
+  margin: 0 auto;
+  gap: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+}
+.titulo-servicos {
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 30px;
+  font-size: 3em;
+}
+
+/* .servico{
+  cursor: grab ;
+} */
+
+.espe {
+  margin-bottom: 25px;
+}
+
+@media (max-width: 439px) {
+  .servico-bg {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 2fr;
+    padding: 36px;
+  }
+  .titulo-servicos {
+    display: grid;
+    max-width: 960px;
+    margin-left: 40px;
+    font-size: 40px;
+  }
+  .espe {
+    margin-bottom: 15px;
+    font-size: 25px;
+  }
+  p {
+    font-size: 20px;
+  }
+}
+
+.espe{
+  font-size: 25px;
+}
+/* __________________________________________________________________________________________________________
+rodape */
+.foto-footer {
+  height: 400px;
+  background-image: url("./img/construction-silhouette\ \(1\).jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.footer-bg {
+  height: 200px;
+  background-color: #215a60;
+}
+
+.rodape {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 50px;
+  gap: 20px;
+  background-color: #215a60;
+}
+
+.endereco{
+  font-size: large;
+}
+.titulo-endereco{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.rua{
+  color: black;
+}
+
+@media (max-width: 439px) {
+  .rodape {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+
+  .whats {
+    display: none;
+  }
+}
+
+.logo-footer {
+  font-family: "Alice", serif;
+}
+
+.whats {
+  position: fixed;
+  bottom: 10px;
+  right: 100px;
+  margin: 30px;
+}
+
+.icones {
+  display: flex;
+  gap: 20px;
+  width: 10px;
+  height: 32px;
+  box-sizing: border-box;
+}
+.js-accordion p {
+  display: none;
+}
+
+.js-accordion p.ativo {
+  display: block;
+  animation: slideDown 0.5s forwards;
+  
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    max-height: 250px;
+    opacity: 1;
+  }
+}
